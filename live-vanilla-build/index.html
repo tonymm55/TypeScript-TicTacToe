@@ -4,24 +4,49 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
-    <title>Vanilla JS Tic-Tac-Toe</title>
+    <script
+      src="https://kit.fontawesome.com/3bfd3ce9e5.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Tic-Tac-Toe</title>
   </head>
   <body>
     <main>
-      <div class="grid"></div>
-      <div>1</div>
-      <div>2</div>
-      <div>3</div>
-      <div>4</div>
-      <div>5</div>
-      <div>6</div>
-      <div>7</div>
-      <div>8</div>
-      <div>9</div>
-      <div>10</div>
-      <div>11</div>
-      <div>12</div>
-      <div>13</div>
+      <div class="grid">
+        <!-- Turn Indicator Section -->
+        <div class="turn" data-id="turn">
+          <i class="fa-solid fa-x turquoise"></i>
+          <p class="turquoise">Player 1, you're up!</p>
+        </div>
+        <div class="actions">3</div>
+        <div class="square">4</div>
+        <div class="square">5</div>
+        <div class="square">6</div>
+        <div class="square">7</div>
+        <div class="square">8</div>
+        <div class="square">9</div>
+        <div class="square">10</div>
+        <div class="square">11</div>
+        <div class="square">12</div>
+        <div class="score">13</div>
+        <div class="score">14</div>
+        <div class="score">15</div>
+      </div>
     </main>
+
+    <footer>
+      <p>
+        Original project by
+        <a href="https://twitter.com/megfdev">@megfdev</a> and
+        <a href="https://twitter.com/Ivan00sto">@Ivan00Sto</a>
+      </p>
+
+      <p>
+        Refactored by
+        <a href="https://twitter.com/zg_dev" style="color: var(--turquoise)"
+          >@zg_dev</a
+        >
+      </p>
+    </footer>
   </body>
 </html>

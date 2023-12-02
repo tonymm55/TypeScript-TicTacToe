@@ -23,6 +23,15 @@ body {
   background-color: var(--dark-gray);
 }
 
+body {
+  padding: 90px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Mobile Layout Style */
 .grid {
   display: grid;
   grid-template-columns: repeat(3, 80px);
@@ -30,7 +39,86 @@ body {
   gap: 5px;
 }
 
-.grid div {
-  height: 20px;
-  width: 20px;
+/* Desktop: Minimum screen width of 768px before these settings take effect */
+@media (min-width: 768px) {
+  .grid {
+    width: 490px;
+    grid-template-columns: repeat(3, 150px);
+    grid-template-rows: 50px repeat(3, 150px) 60px;
+    gap: 20px;
+  }
+}
+
+.turn {
+  color: var(--yellow);
+
+  grid-column-start: 1;
+  grid-column-end: 3;
+  align-self: center;
+
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+@keyframes turn-text-animation {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+
+.turn p {
+  font-size: 14px;
+  animation: 1s ease-in-out turn-text-animation;
+}
+
+@keyframes turn-icon-animation {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.4);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.turn i {
+  font-size: 1.8rem;
+  margin-left: 10px;
+  animation: 1s ease-in-out turn-icon-animation;
+}
+
+.square {
+  background-color: red;
+}
+
+.score {
+  background-color: blue;
+}
+
+.actions {
+  background-color: purple;
+}
+
+/* Footer styles */
+
+footer {
+  color: white;
+  margin-top: 50px;
+}
+
+footer p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+footer a {
+  color: var(--yellow);
 }

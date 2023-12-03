@@ -31,6 +31,32 @@ body {
   align-items: center;
 }
 
+/* Shared utility classes */
+button:hover {
+  cursor: pointer;
+  opacity: 90%;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.yellow {
+  color: var(--yellow);
+}
+
+.turquoise {
+  color: var(--turquoise);
+}
+
+.shadow {
+  box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+    rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.border {
+  border: 1px solid rgba(211, 211, 211, 0.4) !important;
+}
 /* Mobile Layout Style */
 .grid {
   display: grid;
@@ -38,7 +64,6 @@ body {
   grid-template-rows: 50px repeat(3, 80px) 60px;
   gap: 5px;
 }
-
 /* Desktop: Minimum screen width of 768px before these settings take effect */
 @media (min-width: 768px) {
   .grid {
@@ -52,10 +77,9 @@ body {
 .turn {
   color: var(--yellow);
 
+  align-self: center;
   grid-column-start: 1;
   grid-column-end: 3;
-  align-self: center;
-
   display: flex;
   align-items: center;
   gap: 20px;
@@ -95,12 +119,75 @@ body {
   animation: 1s ease-in-out turn-icon-animation;
 }
 
+/* Menu Styles */
+.menu {
+  position: relative;
+}
+
+.menu-btn {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 10px;
+  color: white;
+  background-color: rgba(211, 211, 211, 0.05);
+  border: 1px solid transparent;
+}
+
+.items {
+  position: absolute;
+  z-index: 10;
+  top: 60px;
+  right: 0;
+  background-color: #203139;
+  border-radius: 2px;
+  padding: 10px;
+}
+
+.items button {
+  background-color: transparent;
+  padding: 8px;
+  color: white;
+}
+
+.items button:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 .square {
-  background-color: red;
+  background-color: var(--gray);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+}
+
+.square:hover {
+  cursor: pointer;
+  opacity: 60%;
 }
 
 .score {
-  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+}
+
+/* Sub-selectors (.score p) */
+.score p {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.score span {
+  font-size: 12px;
+  margin-top: 2px;
 }
 
 .actions {
@@ -108,7 +195,6 @@ body {
 }
 
 /* Footer styles */
-
 footer {
   color: white;
   margin-top: 50px;

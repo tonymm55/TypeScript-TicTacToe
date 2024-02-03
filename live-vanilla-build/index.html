@@ -16,32 +16,32 @@
         <!-- Turn Indicator Section -->
         <div class="turn">
           <i class="fa-solid fa-x turquoise"></i>
-          <p>Player 1, you're up!</p>
+          <p>Player 1, You're Up!</p>
         </div>
 
         <!-- Dropdown Menu Section -->
-        <div class="menu">
+        <div class="menu" data-id="menu">
           <button class="menu-btn">
             Actions
             <i class="fa-solid fa-chevron-down"></i>
           </button>
 
-          <div class="items border hidden">
-            <button>Reset</button>
-            <button>New Round</button>
+          <div class="items border hidden" data-id="menu-items">
+            <button data-id="reset-btn">Reset</button>
+            <button data-id="new-round-btn">New Round</button>
           </div>
         </div>
 
         <!-- Gameboard Section -->
-        <div class="square shadow">I</div>
-        <div class="square shadow">L</div>
-        <div class="square shadow">O</div>
-        <div class="square shadow">V</div>
-        <div class="square shadow">E</div>
-        <div class="square shadow">L</div>
-        <div class="square shadow">I</div>
-        <div class="square shadow">S</div>
-        <div class="square shadow">A</div>
+        <div id="1" class="square shadow" data-id="square">X</div>
+        <div id="2" class="square shadow" data-id="square">O</div>
+        <div id="3" class="square shadow" data-id="square">X</div>
+        <div id="4" class="square shadow" data-id="square">O</div>
+        <div id="5" class="square shadow" data-id="square">X</div>
+        <div id="6" class="square shadow" data-id="square">O</div>
+        <div id="7" class="square shadow" data-id="square">X</div>
+        <div id="8" class="square shadow" data-id="square">O</div>
+        <div id="9" class="square shadow" data-id="square">X</div>
 
         <!-- Scoreboard Section -->
         <div class="score shadow" style="background-color: var(--turquoise)">
@@ -62,16 +62,15 @@
     <footer>
       <p>
         Original project by
-        <a href="https://twitter.com/megfdev">@megfdev</a> and
+        <a href="https://twitter.com/megfdev">@megfdev</a> &
         <a href="https://twitter.com/Ivan00sto">@Ivan00Sto</a>
       </p>
-
       <p>
         Refactored by
         <a href="https://twitter.com/tonyMCodes" style="color: var(--turquoise)"
           >@TonyMCodes</a
         >
-        and
+        &
         <a href="https://twitter.com/zg_dev" style="color: var(--turquoise)"
           >@zg_dev</a
         >
@@ -79,11 +78,13 @@
     </footer>
 
     <!-- Modal that opens when game ends -->
-    <div class="modal hidden" data-id="modal">
+    <div class="modal hidden">
       <div class="modal-contents">
-        <p data-id="modal-text">Player 1 wins!</p>
-        <button data-id="modal-btn">Play again</button>
+        <p data-id="modal-text">Player 1 Wins!</p>
+        <button data-id="modal-btn">Play Again!</button>
       </div>
     </div>
+
+    <script src="./app.js"></script>
   </body>
 </html>
